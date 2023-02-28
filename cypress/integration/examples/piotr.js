@@ -19,14 +19,23 @@ describe('My First Test Suite', function() {
       
       // Search for the location
 
-cy.origin('https://www.bbc.co.uk', () => {
+cy.origin('https://www.bbc.co.uk', {args: {selectedCity}},(selectedCity) => {
+  cy.visit('/weather')
 
-cy.get('#ls-c-search__input-label').type("London,Greater London").type('{enter}');
+cy.get('#ls-c-search__input-label').type("London,Greater London").type('{enter}').click;
        
 // Go to Saturday at least a week from today
-       cy.wait(4000);
-       cy.get(':nth-child(1) > .ls-o-location > .gel-long-primer').click();
-       cy.get('#wr-day__content wr-day__content--temp7to8 wr-js-day-content').click();
+cy.get(".wr-day__title wr-js-day-content-title")
+.contains("Saturday")
+.parentsUntil(".wr-calendar__day")
+.last()
+.find(".wr-date__time")
+.click();
+     // Find the date navigation bar and navigate to next week
+     cy.get('.wr-day__title wr-js-day-content-title').click()
+      // cy.wait(4000);
+       //cy.get(':nth-child(1) > .ls-o-location gel-pica > .gel-long-primer').click();
+       //cy.get('#wr-day__content wr-day__content--temp9to10 wr-js-day-content').click();
 
        cy.get('.wr-time-slot-list__time-slot--day0').then(($timeSlots) => {
 
