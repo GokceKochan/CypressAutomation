@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "CypressAutomation",
+			"path": "CypressAutomation"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "CypressAutomation"
+	}
+}
