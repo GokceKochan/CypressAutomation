@@ -1,0 +1,51 @@
+day 1
+
+how to open cypress
+
+1) yol
+a) terminal uzun yol
+./node_modules/.bin/cypress open
+
+b) terminal kisa yol
+nps cypress open
+
+2) yol runner kullanimi
+
+npx cypress open
+--headed               headed mode da calistirilacak            ->npx cypress run--headed
+--browser:chrome       browser turunu degistirebilirsiniz       ->npx cypress run--browser chrome
+--spec:cypress\e2e\1-getting-started\todo.cy.js          belirli bir dosyayi calistiracak
+
+genel kullanimi;
+npx cypress run --headed --browser chrome --spec cypress\e2e\1-getting-started\todo.cy.js  
+
+3)yol script kullanarak
+npm run todo
+//before, after, beforeeach, aftereach
+before(()=>{
+
+})=> hepsinden once bir defa calisir
+
+
+after(()=>{
+
+})=> hepsinden sonra bir defa calisir
+
+afterEach(()=>{
+
+})=> her it blogundan sonra bir defa calisir
+
+beforeEach(()=>{
+
+})=> her it blogundan once bir defa calisir
+
+
+css locator
+
+#id    --> id
+.class --> class
+
+[attr='value']
+tag[attr='value']
+
+kisayollar
