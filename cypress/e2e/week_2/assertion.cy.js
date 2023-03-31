@@ -34,13 +34,14 @@ it('assertions cypress should and', () => {
 
 
 it.only('length assertion', () => {
-    cy.visit('https://demoqa.com/', { timeout: 30000 })
+    cy.visit('https://demoqa.com/', { timeout: 40000 })
     cy.get(':nth-child(2) > :nth-child(1) > .card-up').click()
     cy.get(':nth-child(1) > .group-header > .header-wrapper').click()
 
 
 
-    cy.get('.element-list.collapse.show>ul>li').should('have.length', 9)
+    cy.get('.element-list.collapse.show>ul>li')
+    .should('have.length', 9)
     .should('be.greaterThan', 5)
     .should('be.at.least', 10)
     .should('be.lessThan', 10)

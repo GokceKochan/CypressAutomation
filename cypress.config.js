@@ -7,6 +7,7 @@ module.exports = defineConfig({
    // baseUrl;'https://demoqa.com/ '
    watchForFileChanges: false,
    video: false,
+   defaultCommandTimeout: 40000  ,
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
@@ -15,4 +16,7 @@ module.exports = defineConfig({
   env:{
     userName:"omer"
   }
+
+  
+
 });

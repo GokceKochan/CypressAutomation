@@ -1,4 +1,4 @@
-import FirstTestCasePage from "../../pages/FirstTestCasePage";
+import FirstTestCasePage from '../../pages/FirstTestCasePage';
 
 describe('alias kullanimi', () => {
     const automationteststore = new FirstTestCasePage

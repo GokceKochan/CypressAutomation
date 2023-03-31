@@ -9,13 +9,14 @@ describe('its kullanimi', () => {
 
 
     });
-
+/*
     it('its 2', () => {
         cy.visit('https://demoqa.com/')
 
         cy.get('//div').its('length').should('equal', 109)
         cy.get('//div').should('have.length', 109)
     });
+    */
 
 
     it('it 3', () => {

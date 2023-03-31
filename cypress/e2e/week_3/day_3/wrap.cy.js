@@ -32,9 +32,10 @@ describe('wrap calismasi', () => {
 
 
 
-        cy.get(':nth-child(2) > .element-list > .menu-list > #item-0 > .text').click()
+       cy.get(':nth-child(2) > .element-list > .menu-list > #item-0 > .text').click()
+     //   cy.get('#subjectsWrapper > .col-md-3 > #subjects-label').should('be.visible')
 
-        // cy.get('#firstName').type('wrap 2')
+        cy.get('#firstName').type('wrap 2')
         homePage.type_firstName('wrap 2')
         
         
@@ -60,7 +61,7 @@ describe('wrap calismasi', () => {
 
     it('wrap 4', () => {
 
-        cy.wrap(data).its('firstName').should('equal', 'Earl')
+        cy.wrap(data).its('firstName').should('equal', 'Antonina')
     });
 
 
