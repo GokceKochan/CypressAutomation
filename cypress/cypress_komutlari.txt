@@ -1,0 +1,26 @@
+cy.visit()              -> siteye gonderiyor
+cy.type()               -> yazi yazdiririz
+cy.click()              -> click yapariz
+
+cy.url()                -> bize url i verdi
+cy.title()              -> bize title verecek
+
+cy.get()                -> css locatorlari handle icin
+cy.xpath()              -> xpath locatorlari handle icin 
+
+it.skip()               -> block atlanacak
+it.only()               -> sadece o blogu yapacak
+
+cy.$loc.check()         -> checkbox ve radio check etmede kullaniriz
+cy.$loc.uncheck()       -> checkbox lari uncheck etmee kullaniriz
+
+cy.$loc.select(index)   -> index kullanarak locator seceriz
+cy.$loc.select(value)   -> value kullanarak locator seceriz
+cy.$loc.select(text)    -> text kullanarak locator seceriz
+
+first()                 -> listenin ilk elemenanini verecek
+last()                  -> listenin son elemenini verecek
+eq(n)                   -> listenin n. elementini verecek
+
+cy.log()                -> ara yuze yazdiririz
+console.log()           -> console a yazdiririz

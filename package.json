@@ -4,14 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "todo": "npx cypress run --headed --browser chrome --spec cypress/e2e/1-getting-started/todo.cy.js",
+    "firstDay": "npx cypress run --headed --browser chrome --spec cypress/e2e/day_01/*"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/faker": "^6.6.9",
     "cypress": "^12.8.1"
   },
   "dependencies": {
+    "cypress": "^10.7.0",
+    "cypress-plugin-tab": "^1.0.5",
+    "cypress-xpath": "^2.0.1",
     "faker": "^5.5.3"
   }
 }

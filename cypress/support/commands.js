@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+/// <reference types="cypress" />
+
+
+// ------------  utils ------  
+import  utils from './util'  
+
+Cypress.Commands.add('generateFakerData',utils.generateFakerData)
