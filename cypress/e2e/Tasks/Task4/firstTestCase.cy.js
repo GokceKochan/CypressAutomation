@@ -40,7 +40,6 @@ describe('first test case', () => {
             })
 
 
-
     });
 
     context('2. yol contex', () => {
@@ -87,8 +86,6 @@ describe('first test case', () => {
         });
 
     })
-
-
 
 
 })

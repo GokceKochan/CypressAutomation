@@ -20,6 +20,17 @@ class HomePage {
 
         return cy.get(homePage.firstName)
     }
+
+    click_register() {
+        cy.get("a[href$='register'].mr-2").click()
+    }
+
+
+    click_login() {
+        cy.get("a[href$='login'].mr-4").click()
+    }
+
+    
 }
 
 export default  HomePage 

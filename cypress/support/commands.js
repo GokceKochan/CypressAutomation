@@ -25,8 +25,28 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 /// <reference types="cypress" />
 
+import 'cypress-iframe';
+import {commonPage} from '../pages/CommonPages';
+//type definitions for custom commands like "createDefaultTodos"
+
+import 'cypress-file-upload';
 
 // ------------  utils ------  
 import  utils from './util'  
 
 Cypress.Commands.add('generateFakerData',utils.generateFakerData)
+
+Cypress.Commands.add('iframe', utils.iframe)
+
+
+Cypress.Commands.add('login', (email, password) => {
+
+
+
+    commonPage.getLinks().goToLoginPage()
+    commonPage.getLoginPage().typeUserName(email)
+    commonPage.getLoginPage().typePassword(password)
+    commonPage.getRegisterPage().clickSubmit()
+
+
+})
